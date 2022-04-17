@@ -9,12 +9,21 @@
   </head>
   <body>
     <div class="container">
-      <div class="new-drawing-btns">
+      <div class="new-drawing-btns-container">
         <p>Choose drawing size:</p>
         <button id="btn-16x16">16 x 16 px</button>
         <button id="btn-64x64">64 x 64 px</button>
       </div>
-      <div class="paper" id="paper"></div>
+      <div class="color-btns-and-paper">
+        <div class="color-btns">
+          <p>Choose color:</p>
+          <button class="black-btn" id="black-btn"></button>
+          <button class="red-btn" id="red-btn"></button>
+          <button class="green-btn" id="green-btn"></button>
+          <button class="blue-btn" id="blue-btn"></button>
+        </div>
+        <div class="paper" id="paper"></div>
+      </div>
     </div>
   </body>
   <script src="./script.js"></script>

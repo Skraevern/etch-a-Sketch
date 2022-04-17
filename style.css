@@ -10,11 +10,29 @@ body {
   margin: auto;
   flex: auto;
 }
-.new-drawing-btns {
+.new-drawing-btns-container {
   display: flex;
   margin-bottom: 20px;
   justify-content: space-between;
   width: 320px;
+}
+.color-btns-and-paper {
+  display: flex;
+}
+.color-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.black-btn,
+.red-btn,
+.green-btn,
+.blue-btn {
+  height: 30px;
+  width: 30px;
 }
 .paper {
   display: flex;

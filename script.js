@@ -3,6 +3,10 @@
 let paper = document.getElementById(`paper`);
 let btn16x16 = document.getElementById(`btn-16x16`);
 let btn64x64 = document.getElementById(`btn-64x64`);
+let blackBtn = document.getElementById(`black-btn`);
+let redBtn = document.getElementById(`red-btn`);
+let greenBtn = document.getElementById(`green-btn`);
+let blueBtn = document.getElementById(`blue-btn`);
 
 let clear = function () {
   paper.replaceChildren();
