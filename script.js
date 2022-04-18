@@ -9,9 +9,18 @@ const redBtn = document.getElementById(`red-btn`);
 const greenBtn = document.getElementById(`green-btn`);
 const blueBtn = document.getElementById(`blue-btn`);
 const randomBtn = document.getElementById(`random-btn`);
+const colorBtns = document.querySelectorAll(`.color-btn`);
+
+console.log(typeof colorBtns);
 
 const clear = function () {
   paper.replaceChildren();
+};
+
+const removeBigButton = function () {
+  for (const btn of colorBtns) {
+    btn.classList.remove(`active-button`);
+  }
 };
 
 const grid16x16 = function () {
@@ -44,6 +53,8 @@ const grid64x64 = function () {
 };
 
 const blackColor = function () {
+  removeBigButton();
+  blackBtn.classList.add(`active-button`);
   paper.removeEventListener(`mouseleave`, randomColor);
   paper.addEventListener(
     `mouseover`,
@@ -51,6 +62,8 @@ const blackColor = function () {
   );
 };
 const redColor = function () {
+  removeBigButton();
+  redBtn.classList.add(`active-button`);
   paper.removeEventListener(`mouseleave`, randomColor);
   paper.addEventListener(
     `mouseover`,
@@ -58,6 +71,8 @@ const redColor = function () {
   );
 };
 const greenColor = function () {
+  removeBigButton();
+  greenBtn.classList.add(`active-button`);
   paper.removeEventListener(`mouseleave`, randomColor);
   paper.addEventListener(
     `mouseover`,
@@ -65,6 +80,8 @@ const greenColor = function () {
   );
 };
 const blueColor = function () {
+  removeBigButton();
+  blueBtn.classList.add(`active-button`);
   paper.removeEventListener(`mouseleave`, randomColor);
   paper.addEventListener(
     `mouseover`,
@@ -94,8 +111,11 @@ const randomColor = function () {
   );
 };
 const newRandomColor = function () {
+  removeBigButton();
+  randomBtn.classList.add(`active-button`);
   paper.addEventListener(`mouseleave`, randomColor);
 };
+
 grid16x16();
 blackColor();
 

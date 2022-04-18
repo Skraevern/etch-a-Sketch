@@ -9,20 +9,22 @@
   </head>
   <body>
     <div class="container">
+      <h1>Etch-a-Sketch</h1>
       <div class="new-drawing-btns-container">
+        <img src="./images/img_pencil.png" alt="pencil-image" class="pencil" />
         <p>Choose drawing size:</p>
-        <button id="btn-16x16">16 x 16 px</button>
-        <button id="btn-32x32">32 x 32 px</button>
-        <button id="btn-64x64">64 x 64 px</button>
+        <button class="paper-btn" id="btn-16x16">16 x 16 px</button>
+        <button class="paper-btn" id="btn-32x32">32 x 32 px</button>
+        <button class="paper-btn" id="btn-64x64">64 x 64 px</button>
       </div>
       <div class="color-btns-and-paper">
         <div class="color-btns-container">
-          <p>Choose color:</p>
-          <button class="black-btn" id="black-btn"></button>
-          <button class="red-btn" id="red-btn"></button>
-          <button class="green-btn" id="green-btn"></button>
-          <button class="blue-btn" id="blue-btn"></button>
-          <button class="random-btn" id="random-btn">?</button>
+          <p class="color-btns-container">Choose color:</p>
+          <button class="color-btn black-btn" id="black-btn"></button>
+          <button class="color-btn red-btn" id="red-btn"></button>
+          <button class="color-btn green-btn" id="green-btn"></button>
+          <button class="color-btn blue-btn" id="blue-btn"></button>
+          <button class="color-btn random-btn" id="random-btn">?</button>
         </div>
         <div class="paper" id="paper"></div>
       </div>

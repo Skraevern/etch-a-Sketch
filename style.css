@@ -1,22 +1,40 @@
 body {
   display: flex;
+  font-family: chalkduster;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  background-color: lightgray;
-  padding: 50px 100px 50px 100px;
+  background-color: rgb(231, 145, 92);
+  padding: 20px 70px 170px 0px;
   margin: auto;
   flex: auto;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  margin-left: 125px;
 }
 .new-drawing-btns-container {
   display: flex;
   flex: auto;
-  margin-left: 90px;
   margin-bottom: 20px;
   justify-content: space-between;
-  width: 320px;
+  width: 450px;
+  margin-left: 10px;
+}
+.pencil {
+  height: 60px;
+  width: auto;
+  margin: 0px 35px 0px 30px;
+  padding: 0px;
+}
+.paper-btn {
+  border-radius: 10px;
+  margin: 3px;
+  background-color: rgb(255, 255, 133);
 }
 .color-btns-and-paper {
   display: flex;
@@ -27,7 +45,7 @@ body {
   align-items: center;
   justify-content: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 0px auto 20px auto;
 }
 .black-btn,
 .red-btn,
@@ -49,9 +67,13 @@ body {
 .blue-btn {
   background-color: blue;
 }
+.random-btn {
+  background-color: rgb(255, 255, 133);
+  font-size: 20px;
+}
 .paper {
   display: flex;
-  background-color: white;
+  background-color: hsl(47, 36%, 95%);
   height: 320px;
   width: 320px;
   flex-wrap: wrap;
