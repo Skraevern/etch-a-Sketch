@@ -21,7 +21,7 @@ body {
 .color-btns-and-paper {
   display: flex;
 }
-.color-btns {
+.color-btns-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +32,8 @@ body {
 .black-btn,
 .red-btn,
 .green-btn,
-.blue-btn {
+.blue-btn,
+.random-btn {
   height: 30px;
   width: 30px;
 }
@@ -67,4 +68,8 @@ body {
 .div-64x64 {
   height: 5px;
   width: 5px;
+}
+.active-button {
+  height: 40px;
+  width: 40px;
 }

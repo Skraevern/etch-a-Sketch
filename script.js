@@ -8,6 +8,7 @@ const blackBtn = document.getElementById(`black-btn`);
 const redBtn = document.getElementById(`red-btn`);
 const greenBtn = document.getElementById(`green-btn`);
 const blueBtn = document.getElementById(`blue-btn`);
+const randomBtn = document.getElementById(`random-btn`);
 
 const clear = function () {
   paper.replaceChildren();
@@ -43,28 +44,57 @@ const grid64x64 = function () {
 };
 
 const blackColor = function () {
+  paper.removeEventListener(`mouseleave`, randomColor);
   paper.addEventListener(
     `mouseover`,
     (e) => (e.target.style.backgroundColor = "black")
   );
 };
 const redColor = function () {
+  paper.removeEventListener(`mouseleave`, randomColor);
   paper.addEventListener(
     `mouseover`,
     (e) => (e.target.style.backgroundColor = "red")
   );
 };
 const greenColor = function () {
+  paper.removeEventListener(`mouseleave`, randomColor);
   paper.addEventListener(
     `mouseover`,
     (e) => (e.target.style.backgroundColor = "green")
   );
 };
 const blueColor = function () {
+  paper.removeEventListener(`mouseleave`, randomColor);
   paper.addEventListener(
     `mouseover`,
     (e) => (e.target.style.backgroundColor = "blue")
   );
+};
+
+const randomColor = function () {
+  let randomNumber = Math.floor(Math.random() * 4);
+  let color = ``;
+  switch (randomNumber) {
+    case 0:
+      color = `black`;
+      break;
+    case 1:
+      color = `red`;
+      break;
+    case 2:
+      color = `green`;
+      break;
+    case 3:
+      color = `blue`;
+  }
+  paper.addEventListener(
+    `mouseover`,
+    (e) => (e.target.style.backgroundColor = color)
+  );
+};
+const newRandomColor = function () {
+  paper.addEventListener(`mouseleave`, randomColor);
 };
 grid16x16();
 blackColor();
@@ -76,3 +106,4 @@ blackBtn.addEventListener(`click`, blackColor);
 redBtn.addEventListener(`click`, redColor);
 greenBtn.addEventListener(`click`, greenColor);
 blueBtn.addEventListener(`click`, blueColor);
+randomBtn.addEventListener(`click`, newRandomColor);
