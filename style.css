@@ -12,6 +12,8 @@ body {
 }
 .new-drawing-btns-container {
   display: flex;
+  flex: auto;
+  margin-left: 90px;
   margin-bottom: 20px;
   justify-content: space-between;
   width: 320px;
@@ -57,6 +59,10 @@ body {
 .div-16x16 {
   height: 20px;
   width: 20px;
+}
+.div-32x32 {
+  height: 10px;
+  width: 10px;
 }
 .div-64x64 {
   height: 5px;
