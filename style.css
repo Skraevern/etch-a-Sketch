@@ -34,6 +34,18 @@ body {
   height: 30px;
   width: 30px;
 }
+.black-btn {
+  background-color: black;
+}
+.red-btn {
+  background-color: red;
+}
+.green-btn {
+  background-color: green;
+}
+.blue-btn {
+  background-color: blue;
+}
 .paper {
   display: flex;
   background-color: white;
@@ -49,8 +61,4 @@ body {
 .div-64x64 {
   height: 5px;
   width: 5px;
-}
-
-.active {
-  background-color: black;
 }
