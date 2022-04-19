@@ -9,18 +9,17 @@ const redBtn = document.getElementById(`red-btn`);
 const greenBtn = document.getElementById(`green-btn`);
 const blueBtn = document.getElementById(`blue-btn`);
 const rgbBtn = document.getElementById(`rgb-btn`);
-const colorBtns = document.querySelectorAll(`.color-btn`);
 const rainbowBtn = document.getElementById(`rainbow-btn`);
+const colorBtns = document.querySelectorAll(`.color-btn`);
 
-let drawColor = `black`;
-blackBtn.classList.add(`active-button`);
+let drawColor;
 
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
-const clear = function () {
-  paper.replaceChildren();
+const setColor = function (newColor) {
+  drawColor = newColor;
 };
 
 const removeBigButton = function () {
@@ -53,44 +52,42 @@ const changeColor = function (e) {
   }
 };
 
-const setColor = function (newColor) {
-  drawColor = newColor;
-  removeBigButton();
+window.onload = () => {
+  drawColor = `black`;
   blackBtn.classList.add(`active-button`);
+  newGrid(16);
 };
-
-newGrid(16);
 
 btn16x16.onclick = () => newGrid(16);
 btn32x32.onclick = () => newGrid(32);
 btn64x64.onclick = () => newGrid(64);
-blackBtn.onclick = function () {
+blackBtn.onclick = () => {
   setColor(`black`);
   removeBigButton();
   blackBtn.classList.add(`active-button`);
 };
-redBtn.onclick = function () {
+redBtn.onclick = () => {
   setColor(`red`);
   removeBigButton();
   redBtn.classList.add(`active-button`);
 };
-greenBtn.onclick = function () {
+greenBtn.onclick = () => {
   setColor(`green`);
   removeBigButton();
   greenBtn.classList.add(`active-button`);
 };
-blueBtn.onclick = function () {
+blueBtn.onclick = () => {
   setColor(`blue`);
   removeBigButton();
   blueBtn.classList.add(`active-button`);
 };
 
-rgbBtn.onchange = function (e) {
+rgbBtn.onchange = (e) => {
   setColor(e.target.value);
   removeBigButton();
   rgbBtn.classList.add(`active-button`);
 };
-rainbowBtn.onclick = function () {
+rainbowBtn.onclick = () => {
   setColor(`rainbow`);
   removeBigButton();
   rainbowBtn.classList.add(`active-button`);
