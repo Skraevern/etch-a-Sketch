@@ -15,6 +15,10 @@ const rainbowBtn = document.getElementById(`rainbow-btn`);
 let drawColor = `black`;
 blackBtn.classList.add(`active-button`);
 
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
 const clear = function () {
   paper.replaceChildren();
 };
@@ -56,6 +60,7 @@ const grid64x64 = function () {
 };
 
 const changeColor = function (e) {
+  if (e.type === "mouseover" && !mouseDown) return;
   if (drawColor === `rainbow`) {
     const randomR = Math.floor(Math.random() * 256);
     const randomG = Math.floor(Math.random() * 256);
