@@ -47,13 +47,9 @@ h1 {
   justify-content: space-between;
   margin: 0px auto 20px auto;
 }
-.black-btn,
-.red-btn,
-.green-btn,
-.blue-btn,
-.random-btn {
-  height: 30px;
-  width: 30px;
+.color-btn {
+  height: 40px;
+  width: 40px;
 }
 .black-btn {
   background-color: black;
@@ -67,7 +63,8 @@ h1 {
 .blue-btn {
   background-color: blue;
 }
-.random-btn {
+.random-btn,
+.rainbow-btn {
   background-color: rgb(255, 255, 133);
   font-size: 20px;
 }
@@ -79,19 +76,19 @@ h1 {
   flex-wrap: wrap;
 }
 
-.div-16x16 {
+.grid-16x16 {
   height: 20px;
   width: 20px;
 }
-.div-32x32 {
+.grid-32x32 {
   height: 10px;
   width: 10px;
 }
-.div-64x64 {
+.grid-64x64 {
   height: 5px;
   width: 5px;
 }
 .active-button {
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
 }
