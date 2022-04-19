@@ -29,31 +29,11 @@ const removeBigButton = function () {
   }
 };
 
-const grid16x16 = function () {
-  clear();
-  for (let i = 0; i < 256; i++) {
+const newGrid = function (gridSize) {
+  paper.replaceChildren();
+  for (let i = 0; i < gridSize * gridSize; i++) {
     const gridElement = document.createElement("div");
-    gridElement.classList.add("grid-16x16");
-    gridElement.addEventListener("mouseover", changeColor);
-    paper.appendChild(gridElement);
-  }
-};
-
-const grid32x32 = function () {
-  clear();
-  for (let i = 0; i < 1028; i++) {
-    const gridElement = document.createElement("div");
-    gridElement.classList.add("grid-32x32");
-    gridElement.addEventListener("mouseover", changeColor);
-    paper.appendChild(gridElement);
-  }
-};
-
-const grid64x64 = function () {
-  clear();
-  for (let i = 0; i < 4096; i++) {
-    const gridElement = document.createElement("div");
-    gridElement.classList.add("grid-64x64");
+    gridElement.classList.add(`grid-${gridSize}x${gridSize}`);
     gridElement.addEventListener("mouseover", changeColor);
     paper.appendChild(gridElement);
   }
@@ -79,11 +59,11 @@ const setColor = function (newColor) {
   blackBtn.classList.add(`active-button`);
 };
 
-grid16x16();
+newGrid(16);
 
-btn16x16.addEventListener(`click`, grid16x16);
-btn32x32.addEventListener(`click`, grid32x32);
-btn64x64.addEventListener(`click`, grid64x64);
+btn16x16.onclick = () => newGrid(16);
+btn32x32.onclick = () => newGrid(32);
+btn64x64.onclick = () => newGrid(64);
 blackBtn.onclick = function () {
   setColor(`black`);
   removeBigButton();
